@@ -1,0 +1,180 @@
+.page {
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: #141414;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registration,
+.preview {
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background-color: #1f1f1f;
+}
+
+/* Registration card */
+
+.registration {
+  min-height: 411px;
+  padding: 20px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #f9f9f9;
+}
+
+.logoIcon {
+  display: block;
+
+  width: 42px;
+  height: 17px;
+
+  color: #f9f9f9;
+}
+
+.logoText {
+  display: none;
+
+  color: #f9f9f9;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.title {
+  max-width: 295px;
+  margin: 0;
+
+  color: #f9f9f9;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.title span {
+  color: #686868;
+}
+
+/* Phone preview card */
+
+.preview {
+  min-height: 351px;
+  padding-top: 20px;
+}
+
+.preview picture {
+  display: block;
+}
+
+.phoneImage {
+  display: block;
+
+  width: 255px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+  .page {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  .registration {
+    min-height: 960px;
+    padding: 40px 64px;
+  }
+
+  .logoIcon {
+    width: 24px;
+    height: 10px;
+  }
+
+  .logoText {
+    display: inline;
+  }
+
+  .content {
+    margin-top: 157px;
+  }
+
+  .title {
+    max-width: 444px;
+
+    font-size: 64px;
+    line-height: 0.94;
+  }
+
+  .preview {
+    display: none;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .registration,
+  .preview {
+    min-height: calc(100vh - 64px);
+  }
+
+  .registration {
+    padding: 40px 64px;
+  }
+
+  .content {
+    margin-top: 107px;
+  }
+
+  .preview {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 80px 0 0;
+  }
+
+  .preview picture {
+    display: block;
+    width: 405px;
+  }
+
+  .phoneImage {
+    width: 405px;
+    height: auto;
+    margin: 0;
+  }
+}
